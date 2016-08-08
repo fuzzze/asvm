@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>mappin-selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="mappin-selected" transform="translate(1.000000, 1.000000)">
+            <circle id="oval" stroke="#DC493C" stroke-width="0.5" cx="15" cy="15" r="15"></circle>
+            <circle id="oval-copy-2" fill="#DC493C" cx="15" cy="15" r="12"></circle>
+            <circle id="oval-copy" fill="#802C27" cx="15" cy="15" r="5"></circle>
+        </g>
+    </g>
+</svg>

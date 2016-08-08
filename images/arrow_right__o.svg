@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="55px" height="56px" viewBox="0 0 55 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow_right_hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow_right_hover" transform="translate(27.500000, 28.000000) scale(-1, 1) translate(-27.500000, -28.000000) ">
+            <path d="M54.2182541,4.35207426e-14 L54.2182541,55.2128116 L0.000423882795,55.2128116 C0.000141380813,55.1400934 0,55.067342 0,54.9945575 C0,24.8799069 24.2029751,0.418164006 54.2182541,4.39513877e-14 Z" id="Combined-Shape-Copy" fill="#3AAB47"></path>
+            <polygon id="Shape-Copy-3" fill="#FFFFFF" opacity="0.897154851" transform="translate(28.553669, 29.553669) rotate(45.000000) translate(-28.553669, -29.553669) " points="35.4087647 21.1981729 32.8149446 18.6551959 21.698573 29.5536689 32.8149446 40.4521418 35.4087647 37.9091648 26.8862131 29.5536689"></polygon>
+        </g>
+    </g>
+</svg>

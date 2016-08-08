@@ -1,0 +1,21 @@
+{
+	"version": 1,
+	"type": "panorama",
+	"external": {
+		"js": [],
+		"css": []
+	},
+	"skin": {
+		"js": "skin.js"
+	},
+	"player": {
+		"js": "pano2vr_player.js"
+	},
+	"creationdate": "2016-08-08T15:22:28.595Z",
+	"configuration": "shpil.xml",
+	"preview": {
+		"img": "preview.jpg",
+		"width": 2560,
+		"height": 1920
+	}
+}

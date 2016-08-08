@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="shpil">
+<panorama id="shpil">
+  <input leveltilesize="510" levelbias="0.400" levelbiashidpi="0.400" leveltileurl="shpil/c%c_l%r_%y_%x.jpg" width="4416" overlap="1" levelingpitch="0" levelingroll="0" height="4416">
+    <level predecode="0" width="4416" height="4416" preload="0"/>
+    <level predecode="0" width="2208" height="2208" preload="0"/>
+    <level predecode="0" width="1104" height="1104" preload="0"/>
+    <level predecode="0" width="552" height="552" preload="0"/>
+    <level predecode="1" width="276" height="276" preload="1"/>
+    <preview color="0x808080" strip="1"/>
+  </input>
+  <view fovmode="0" pannorth="0">
+    <start pan="124.24" tilt="3.8" fov="57"/>
+    <min pan="0" tilt="-24.7" fov="5"/>
+    <max pan="360" tilt="90" fov="65"/>
+  </view>
+  <userdata source="" description="Царь" info="index" datetime="" comment="" longitude="" copyright="" tags="pano_src" title="Алеша, сходи в магазин!" author="" latitude=""/>
+  <hotspots width="180" wordwrap="1" height="20">
+    <label textcolor="0x000000" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" bordercolor="0x000000" wordwrap="1" textalpha="1" background="1" border="1" height="20" backgroundalpha="1"/>
+    <polystyle handcursor="1" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" backgroundalpha="0.2509803921568627"/>
+  </hotspots>
+  <media>
+    <lensflare pan="172.02" type="2" id="Lensflare01" tilt="54.44" blinding="50" color="0xffffff" alpha="80"/>
+  </media>
+  <transition zoomout="0" enabled="0" type="crossdissolve" zoomoutpause="1" blendtime="1" zoomin="0" zoomfov="20" blendcolor="0x000000" zoomspeed="2" softedge="0"/>
+  <control invertcontrol="1" sensitivity="8" simulatemass="1" lockedmouse="0" invertwheel="0" contextfullscreen="0" hideabout="1" lockedwheel="0" lockedkeyboard="0" speedwheel="1" lockedkeyboardzoom="0" dblclickfullscreen="0"/>
+</panorama>
+</tour>
