@@ -14,7 +14,7 @@
     <min tilt="-24.7" fov="5" pan="0"/>
     <max tilt="90" fov="65" pan="360"/>
   </view>
-  <userdata comment="" datetime="" title="Алеша, сходи в магазин!" longitude="" author="" copyright="" source="" tags="pano_src" description="Алеша, сходи в магазин!" info="index" latitude=""/>
+  <userdata comment="" datetime="" title="Шпиль мит мир, Алеша" longitude="" author="" copyright="" source="" tags="pano_src" description="Алеша, сходи в магазин!" info="index" latitude=""/>
   <hotspots height="20" wordwrap="1" width="180">
     <label background="1" bordercolor="0x000000" borderradius="1" border="1" height="20" wordwrap="1" textalpha="1" backgroundalpha="1" enabled="1" width="180" borderalpha="1" textcolor="0x000000" backgroundcolor="0xffffff"/>
     <polystyle bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff"/>
