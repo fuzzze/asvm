@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Tue Aug 9 03:04:31 2016
+// Generated Thu Aug 11 02:42:43 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -1000,7 +1000,7 @@ function pano2vrSkin(player,base) {
 				me._arrow_menu.style[domTransition]='all 500ms ease-out 0ms';
 			}
 			if (flag) {
-				me._arrow_menu.style.opacity='0.9';
+				me._arrow_menu.style.opacity='0.7';
 				me._arrow_menu.style.visibility=me._arrow_menu.ggVisible?'inherit':'hidden';
 			} else {
 				me._arrow_menu.style.opacity='0';
@@ -1085,16 +1085,16 @@ function pano2vrSkin(player,base) {
 		this._arrow_menu.ggId="arrow_menu";
 		this._arrow_menu.ggTop=-124;
 		this._arrow_menu.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		this._arrow_menu.ggVisible=false;
+		this._arrow_menu.ggVisible=true;
 		this._arrow_menu.className='ggskin ggskin_container ';
 		this._arrow_menu.ggType='container';
 		hs ='';
 		hs+='height : 112px;';
 		hs+='left : 14px;';
-		hs+='opacity : 0.9;';
+		hs+='opacity : 0.7;';
 		hs+='position : absolute;';
 		hs+='top : -124px;';
-		hs+='visibility : hidden;';
+		hs+='visibility : inherit;';
 		hs+='width : 112px;';
 		this._arrow_menu.setAttribute('style',hs);
 		this._arrow_menu.style[domTransform + 'Origin']='50% 50%';
@@ -1149,7 +1149,7 @@ function pano2vrSkin(player,base) {
 		this._green_circle.appendChild(this._green_circle__img);
 		this._green_circle.ggId="green_circle";
 		this._green_circle.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		this._green_circle.ggVisible=true;
+		this._green_circle.ggVisible=false;
 		this._green_circle.className='ggskin ggskin_svg ';
 		this._green_circle.ggType='svg';
 		hs ='';
@@ -1157,7 +1157,7 @@ function pano2vrSkin(player,base) {
 		hs+='left : -1px;';
 		hs+='position : absolute;';
 		hs+='top : -1px;';
-		hs+='visibility : inherit;';
+		hs+='visibility : hidden;';
 		hs+='width : 112px;';
 		this._green_circle.setAttribute('style',hs);
 		this._green_circle.style[domTransform + 'Origin']='50% 50%';
