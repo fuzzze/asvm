@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Thu Aug 11 02:42:43 2016
+// Generated Fri Aug 12 03:52:31 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
