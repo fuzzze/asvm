@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Mon Aug 15 02:15:45 2016
+// Generated Mon Aug 15 02:22:23 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -2196,7 +2196,7 @@ function pano2vrSkin(player,base) {
 		hs+='padding: 0px 1px 0px 1px;';
 		hs+='overflow: hidden;';
 		this._cover__text.setAttribute('style',hs);
-		this._cover__text.innerHTML="<iframe id=\"cover\" src=\"index.html\"><\/iframe>";
+		this._cover__text.innerHTML="";
 		this._cover.appendChild(this._cover__text);
 		me._cover.ggIsActive=function() {
 			return false;
@@ -2216,42 +2216,44 @@ function pano2vrSkin(player,base) {
 		this._cover.ggUpdatePosition=function () {
 		}
 		this.divSkin.appendChild(this._cover);
-		this._start_button=document.createElement('div');
-		this._start_button.ggId="start_button";
-		this._start_button.ggLeft=-99;
-		this._start_button.ggTop=-66;
-		this._start_button.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-		this._start_button.ggVisible=true;
-		this._start_button.className='ggskin ggskin_rectangle ';
-		this._start_button.ggType='rectangle';
+		this._bigalesha=document.createElement('div');
+		this._bigalesha__img=document.createElement('img');
+		this._bigalesha__img.className='ggskin ggskin_svg';
+		this._bigalesha__img.setAttribute('src',basePath + 'images/bigalesha.svg');
+		this._bigalesha__img.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;');
+		this._bigalesha__img['ondragstart']=function() { return false; };
+		this._bigalesha.appendChild(this._bigalesha__img);
+		this._bigalesha.ggId="big-alesha";
+		this._bigalesha.ggLeft=-118;
+		this._bigalesha.ggTop=-96;
+		this._bigalesha.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._bigalesha.ggVisible=true;
+		this._bigalesha.className='ggskin ggskin_svg ';
+		this._bigalesha.ggType='svg';
 		hs ='';
-		hs+=cssPrefix + 'border-radius : 6px;';
-		hs+='border-radius : 6px;';
-		hs+='background : #ffffff;';
-		hs+='border : 1px solid #000000;';
 		hs+='cursor : pointer;';
-		hs+='height : 38px;';
-		hs+='left : -99px;';
+		hs+='height : 161px;';
+		hs+='left : -118px;';
 		hs+='position : absolute;';
-		hs+='top : -66px;';
+		hs+='top : -96px;';
 		hs+='visibility : inherit;';
-		hs+='width : 158px;';
-		this._start_button.setAttribute('style',hs);
-		this._start_button.style[domTransform + 'Origin']='50% 50%';
-		me._start_button.ggIsActive=function() {
+		hs+='width : 220px;';
+		this._bigalesha.setAttribute('style',hs);
+		this._bigalesha.style[domTransform + 'Origin']='50% 50%';
+		me._bigalesha.ggIsActive=function() {
 			return false;
 		}
-		me._start_button.ggElementNodeId=function() {
+		me._bigalesha.ggElementNodeId=function() {
 			return me.player.getCurrentNode();
 		}
-		this._start_button.onclick=function () {
+		this._bigalesha.onclick=function () {
 			if (me.player.transitionsDisabled) {
-				me._start_button.style[domTransition]='none';
+				me._bigalesha.style[domTransition]='none';
 			} else {
-				me._start_button.style[domTransition]='all 500ms ease-out 0ms';
+				me._bigalesha.style[domTransition]='all 500ms ease-out 0ms';
 			}
-			me._start_button.style.opacity='0';
-			me._start_button.style.visibility='hidden';
+			me._bigalesha.style.opacity='0';
+			me._bigalesha.style.visibility='hidden';
 			if (me.player.transitionsDisabled) {
 				me._cover.style[domTransition]='none';
 			} else {
@@ -2260,16 +2262,16 @@ function pano2vrSkin(player,base) {
 			me._cover.style.opacity='0';
 			me._cover.style.visibility='hidden';
 		}
-		this._start_button.ggUpdatePosition=function () {
+		this._bigalesha.ggUpdatePosition=function () {
 			this.style[domTransition]='none';
 			if (this.parentNode) {
 				var w=this.parentNode.offsetWidth;
 					this.style.left=(this.ggLeft - 0 + w/2) + 'px';
 				var h=this.parentNode.offsetHeight;
-					this.style.top=(this.ggTop - 0 + h) + 'px';
+					this.style.top=(this.ggTop - 0 + h/2) + 'px';
 			}
 		}
-		this.divSkin.appendChild(this._start_button);
+		this.divSkin.appendChild(this._bigalesha);
 		me._arrow_menu.style[domTransition]='none';
 		me._arrow_menu.ggParameter.a="45.0000";
 		me._arrow_menu.style[domTransform]=parameterToTransform(me._arrow_menu.ggParameter);
