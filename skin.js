@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Sun Aug 14 15:11:37 2016
+// Generated Mon Aug 15 02:15:45 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -2165,6 +2165,111 @@ function pano2vrSkin(player,base) {
 		}
 		this._info_window.appendChild(this._svg_2);
 		this.divSkin.appendChild(this._info_window);
+		this._cover=document.createElement('div');
+		this._cover__text=document.createElement('div');
+		this._cover.className='ggskin ggskin_textdiv';
+		this._cover.ggTextDiv=this._cover__text;
+		this._cover.ggId="cover";
+		this._cover.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._cover.ggVisible=true;
+		this._cover.className='ggskin ggskin_text ';
+		this._cover.ggType='text';
+		hs ='';
+		hs+='height : 100%;';
+		hs+='left : 0px;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 100%;';
+		this._cover.setAttribute('style',hs);
+		this._cover.style[domTransform + 'Origin']='0% 0%';
+		hs ='position:absolute;';
+		hs+='left: 0px;';
+		hs+='top:  0px;';
+		hs+='width: 100%;';
+		hs+='height: 100%;';
+		hs+='background: #000000;';
+		hs+='border: 0px solid #000000;';
+		hs+='color: #000000;';
+		hs+='text-align: left;';
+		hs+='white-space: nowrap;';
+		hs+='padding: 0px 1px 0px 1px;';
+		hs+='overflow: hidden;';
+		this._cover__text.setAttribute('style',hs);
+		this._cover__text.innerHTML="<iframe id=\"cover\" src=\"index.html\"><\/iframe>";
+		this._cover.appendChild(this._cover__text);
+		me._cover.ggIsActive=function() {
+			return false;
+		}
+		me._cover.ggElementNodeId=function() {
+			return me.player.getCurrentNode();
+		}
+		this._cover.onclick=function () {
+			if (me.player.transitionsDisabled) {
+				me._cover.style[domTransition]='none';
+			} else {
+				me._cover.style[domTransition]='all 500ms ease-out 0ms';
+			}
+			me._cover.style.opacity='0';
+			me._cover.style.visibility='hidden';
+		}
+		this._cover.ggUpdatePosition=function () {
+		}
+		this.divSkin.appendChild(this._cover);
+		this._start_button=document.createElement('div');
+		this._start_button.ggId="start_button";
+		this._start_button.ggLeft=-99;
+		this._start_button.ggTop=-66;
+		this._start_button.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._start_button.ggVisible=true;
+		this._start_button.className='ggskin ggskin_rectangle ';
+		this._start_button.ggType='rectangle';
+		hs ='';
+		hs+=cssPrefix + 'border-radius : 6px;';
+		hs+='border-radius : 6px;';
+		hs+='background : #ffffff;';
+		hs+='border : 1px solid #000000;';
+		hs+='cursor : pointer;';
+		hs+='height : 38px;';
+		hs+='left : -99px;';
+		hs+='position : absolute;';
+		hs+='top : -66px;';
+		hs+='visibility : inherit;';
+		hs+='width : 158px;';
+		this._start_button.setAttribute('style',hs);
+		this._start_button.style[domTransform + 'Origin']='50% 50%';
+		me._start_button.ggIsActive=function() {
+			return false;
+		}
+		me._start_button.ggElementNodeId=function() {
+			return me.player.getCurrentNode();
+		}
+		this._start_button.onclick=function () {
+			if (me.player.transitionsDisabled) {
+				me._start_button.style[domTransition]='none';
+			} else {
+				me._start_button.style[domTransition]='all 500ms ease-out 0ms';
+			}
+			me._start_button.style.opacity='0';
+			me._start_button.style.visibility='hidden';
+			if (me.player.transitionsDisabled) {
+				me._cover.style[domTransition]='none';
+			} else {
+				me._cover.style[domTransition]='all 500ms ease-out 0ms';
+			}
+			me._cover.style.opacity='0';
+			me._cover.style.visibility='hidden';
+		}
+		this._start_button.ggUpdatePosition=function () {
+			this.style[domTransition]='none';
+			if (this.parentNode) {
+				var w=this.parentNode.offsetWidth;
+					this.style.left=(this.ggLeft - 0 + w/2) + 'px';
+				var h=this.parentNode.offsetHeight;
+					this.style.top=(this.ggTop - 0 + h) + 'px';
+			}
+		}
+		this.divSkin.appendChild(this._start_button);
 		me._arrow_menu.style[domTransition]='none';
 		me._arrow_menu.ggParameter.a="45.0000";
 		me._arrow_menu.style[domTransform]=parameterToTransform(me._arrow_menu.ggParameter);

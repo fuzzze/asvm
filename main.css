@@ -25,3 +25,8 @@
 	border: 1px solid gray;
 	background: white;
 }
+
+#cover{
+	width:100%;
+	height:100%;
+}

@@ -11,8 +11,8 @@
 	"player": {
 		"js": "pano2vr_player.js"
 	},
-	"creationdate": "2016-08-14T07:11:37.795Z",
-	"configuration": "shpil.xml",
+	"creationdate": "2016-08-14T18:15:46.171Z",
+	"configuration": "index.xml",
 	"preview": {
 		"img": "preview.jpg",
 		"width": 1280,
