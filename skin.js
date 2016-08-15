@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Mon Aug 15 16:12:27 2016
+// Generated Mon Aug 15 18:26:27 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -2207,7 +2207,6 @@ function pano2vrSkin(player,base) {
 		}
 		this._cover.ggUpdatePosition=function () {
 		}
-		this.divSkin.appendChild(this._cover);
 		this._bigalesha=document.createElement('div');
 		this._bigalesha__img=document.createElement('img');
 		this._bigalesha__img.className='ggskin ggskin_svg';
@@ -2233,9 +2232,15 @@ function pano2vrSkin(player,base) {
 		this._bigalesha.setAttribute('style',hs);
 		this._bigalesha.style[domTransform + 'Origin']='50% 50%';
 		me._bigalesha.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
 			return false;
 		}
 		me._bigalesha.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
 			return me.player.getCurrentNode();
 		}
 		this._bigalesha.onclick=function () {
@@ -2253,13 +2258,6 @@ function pano2vrSkin(player,base) {
 			}
 			me._cover.style.opacity='0';
 			me._cover.style.visibility='hidden';
-			if (me.player.transitionsDisabled) {
-				me._bigalesha.style[domTransition]='none';
-			} else {
-				me._bigalesha.style[domTransition]='all 500ms ease-out 0ms';
-			}
-			me._bigalesha.ggParameter.sx=10;me._bigalesha.ggParameter.sy=10;
-			me._bigalesha.style[domTransform]=parameterToTransform(me._bigalesha.ggParameter);
 		}
 		this._bigalesha.ggUpdatePosition=function () {
 			this.style[domTransition]='none';
@@ -2270,7 +2268,8 @@ function pano2vrSkin(player,base) {
 					this.style.top=(this.ggTop - 0 + h/2) + 'px';
 			}
 		}
-		this.divSkin.appendChild(this._bigalesha);
+		this._cover.appendChild(this._bigalesha);
+		this.divSkin.appendChild(this._cover);
 		me._arrow_menu.style[domTransition]='none';
 		me._arrow_menu.ggParameter.a="45.0000";
 		me._arrow_menu.style[domTransform]=parameterToTransform(me._arrow_menu.ggParameter);
