@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <panorama id="node1">
-  <input overlap="1" levelbias="0.400" levelingroll="0" levelbiashidpi="0.400" levelingpitch="0" width="4416" leveltilesize="510" leveltileurl="karla/c%c_l%r_%y_%x.jpg" height="4416">
-    <level predecode="0" preload="0" width="4416" height="4416"/>
-    <level predecode="0" preload="0" width="2208" height="2208"/>
-    <level predecode="0" preload="0" width="1104" height="1104"/>
-    <level predecode="0" preload="0" width="552" height="552"/>
-    <level predecode="1" preload="1" width="276" height="276"/>
-    <preview strip="1" color="0x000000"/>
+  <input leveltilesize="510" levelingroll="0" width="4416" levelingpitch="0" levelbiashidpi="0.400" height="4416" levelbias="0.400" overlap="1" leveltileurl="karla/c%c_l%r_%y_%x.jpg">
+    <level preload="0" width="4416" height="4416" predecode="0"/>
+    <level preload="0" width="2208" height="2208" predecode="0"/>
+    <level preload="0" width="1104" height="1104" predecode="0"/>
+    <level preload="0" width="552" height="552" predecode="0"/>
+    <level preload="1" width="276" height="276" predecode="1"/>
+    <preview color="0x000000" strip="1"/>
   </input>
   <view fovmode="0" pannorth="0">
-    <start pan="-2.64" tilt="0.14" fov="49.7"/>
-    <min pan="0" tilt="-24.7" fov="5"/>
-    <max pan="360" tilt="90" fov="48.5"/>
+    <start tilt="0.14" fov="49.7" pan="-2.64"/>
+    <min tilt="-24.7" fov="5" pan="0"/>
+    <max tilt="90" fov="48.5" pan="360"/>
   </view>
-  <userdata source="" info="" title="Алеша, сходи в магазин!" latitude="" datetime="2016:08:12 03:02:56" longitude="" copyright="" description="Смена картинок" tags="pano_src" author="" comment=""/>
+  <userdata tags="karla" copyright="" latitude="" description="Смена картинок" datetime="2016:08:12 03:02:56" info="" comment="" author="" source="https://asvm.tk/" title="Алеша, сходи в магазин!" longitude=""/>
   <hotspots width="180" height="20" wordwrap="1">
-    <label textcolor="0x000000" bordercolor="0x000000" backgroundcolor="0xffffff" enabled="1" textalpha="1" borderradius="1" width="180" borderalpha="1" backgroundalpha="1" border="1" height="20" background="1" wordwrap="1"/>
-    <polystyle mode="0" bordercolor="0x0000ff" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" backgroundalpha="0.2509803921568627"/>
-    <polyhotspot id="index" title="" url="{index}" target="_blank" description="">
-      <vertex pan="-147.99" tilt="13.37"/>
-      <vertex pan="-163.19" tilt="13.15"/>
-      <vertex pan="-163.3" tilt="5.84"/>
-      <vertex pan="-148.08" tilt="5.92"/>
+    <label backgroundcolor="0xffffff" textalpha="1" background="1" borderalpha="1" enabled="1" width="180" textcolor="0x000000" border="1" height="20" bordercolor="0x000000" backgroundalpha="1" wordwrap="1" borderradius="1"/>
+    <polystyle backgroundcolor="0x0000ff" borderalpha="1" mode="0" handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.2509803921568627"/>
+    <polyhotspot description="" url="{index}" target="_blank" title="" id="index">
+      <vertex tilt="13.37" pan="-147.99"/>
+      <vertex tilt="13.15" pan="-163.19"/>
+      <vertex tilt="5.84" pan="-163.3"/>
+      <vertex tilt="5.92" pan="-148.08"/>
     </polyhotspot>
   </hotspots>
   <media>
-    <sound id="_background" pan="86.910" mode="4" level="0.600" ambientlevel="0.000" tilt="-1.290" tiltsize="19.000" loop="1" field="90.000" pansize="19.000">
+    <sound tiltsize="10.000" field="90.000" ambientlevel="0.000" mode="4" pansize="21.000" tilt="-1.530" loop="1" pan="86.500" level="0.700" id="_main">
       <source url="media/mif_2.mp3"/>
     </sound>
   </media>
-  <transition type="crossdissolve" softedge="0" blendtime="1" zoomin="0" zoomout="0" zoomspeed="2" enabled="0" zoomoutpause="1" blendcolor="0x000000" zoomfov="20"/>
-  <control speedwheel="1" invertcontrol="1" lockedmouse="0" invertwheel="0" lockedwheel="0" lockedkeyboardzoom="0" dblclickfullscreen="0" hideabout="0" simulatemass="1" sensitivity="8" lockedkeyboard="0" contextfullscreen="0"/>
+  <transition zoomin="0" zoomout="0" enabled="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1" blendcolor="0x000000" softedge="0" zoomspeed="2"/>
+  <control lockedkeyboard="0" hideabout="0" contextfullscreen="0" invertcontrol="1" speedwheel="1" sensitivity="8" simulatemass="1" lockedmouse="0" lockedkeyboardzoom="0" invertwheel="0" dblclickfullscreen="0" lockedwheel="0"/>
 </panorama>

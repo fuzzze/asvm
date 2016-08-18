@@ -1,12 +1,11 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Mon Aug 15 18:26:27 2016
+// Generated Fri Aug 19 01:08:00 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
 	ggSkinVars['currentPan'] = 'index';
-	ggSkinVars['id_pano'] = 'id_pano';
 	var me=this;
 	var flag=false;
 	this.player=player;
@@ -2270,6 +2269,201 @@ function pano2vrSkin(player,base) {
 		}
 		this._cover.appendChild(this._bigalesha);
 		this.divSkin.appendChild(this._cover);
+		this._buttons_social=document.createElement('div');
+		this._buttons_social.ggId="buttons_social";
+		this._buttons_social.ggLeft=-28;
+		this._buttons_social.ggTop=-41;
+		this._buttons_social.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._buttons_social.ggVisible=true;
+		this._buttons_social.className='ggskin ggskin_container ';
+		this._buttons_social.ggType='container';
+		hs ='';
+		hs+='height : 32px;';
+		hs+='left : -28px;';
+		hs+='position : absolute;';
+		hs+='top : -41px;';
+		hs+='visibility : inherit;';
+		hs+='width : 102px;';
+		this._buttons_social.setAttribute('style',hs);
+		this._buttons_social.style[domTransform + 'Origin']='50% 50%';
+		me._buttons_social.ggIsActive=function() {
+			return false;
+		}
+		me._buttons_social.ggElementNodeId=function() {
+			return me.player.getCurrentNode();
+		}
+		this._buttons_social.ggUpdatePosition=function () {
+			this.style[domTransition]='none';
+			if (this.parentNode) {
+				var w=this.parentNode.offsetWidth;
+					this.style.left=(this.ggLeft - 0 + w/2) + 'px';
+				var h=this.parentNode.offsetHeight;
+					this.style.top=(this.ggTop - 0 + h) + 'px';
+			}
+		}
+		this._button_twitter=document.createElement('div');
+		this._button_twitter__img=document.createElement('img');
+		this._button_twitter__img.className='ggskin ggskin_svg';
+		this._button_twitter__img.setAttribute('src',basePath + 'images/button_twitter.svg');
+		this._button_twitter__img.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;');
+		this._button_twitter__img['ondragstart']=function() { return false; };
+		this._button_twitter.appendChild(this._button_twitter__img);
+		this._button_twitter__imgo=document.createElement('img');
+		this._button_twitter__imgo.className='ggskin ggskin_svg';
+		this._button_twitter__imgo.setAttribute('src',basePath + 'images/button_twitter__o.svg');
+		this._button_twitter__imgo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;');
+		this._button_twitter__imgo['ondragstart']=function() { return false; };
+		this._button_twitter.appendChild(this._button_twitter__imgo);
+		this._button_twitter.ggId="button_twitter";
+		this._button_twitter.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._button_twitter.ggVisible=true;
+		this._button_twitter.className='ggskin ggskin_svg ';
+		this._button_twitter.ggType='svg';
+		hs ='';
+		hs+='cursor : pointer;';
+		hs+='height : 32px;';
+		hs+='left : 70px;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 32px;';
+		this._button_twitter.setAttribute('style',hs);
+		this._button_twitter.style[domTransform + 'Origin']='50% 50%';
+		me._button_twitter.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		me._button_twitter.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return me.player.getCurrentNode();
+		}
+		this._button_twitter.onclick=function () {
+			window.open('http:\/\/twitter.com\/share?url=' + location.href);
+		}
+		this._button_twitter.onmouseover=function () {
+			me._button_twitter__img.style.visibility='hidden';
+			me._button_twitter__imgo.style.visibility='inherit';
+		}
+		this._button_twitter.onmouseout=function () {
+			me._button_twitter__img.style.visibility='inherit';
+			me._button_twitter__imgo.style.visibility='hidden';
+		}
+		this._button_twitter.ggUpdatePosition=function () {
+		}
+		this._buttons_social.appendChild(this._button_twitter);
+		this._button_facebook=document.createElement('div');
+		this._button_facebook__img=document.createElement('img');
+		this._button_facebook__img.className='ggskin ggskin_svg';
+		this._button_facebook__img.setAttribute('src',basePath + 'images/button_facebook.svg');
+		this._button_facebook__img.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;');
+		this._button_facebook__img['ondragstart']=function() { return false; };
+		this._button_facebook.appendChild(this._button_facebook__img);
+		this._button_facebook__imgo=document.createElement('img');
+		this._button_facebook__imgo.className='ggskin ggskin_svg';
+		this._button_facebook__imgo.setAttribute('src',basePath + 'images/button_facebook__o.svg');
+		this._button_facebook__imgo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;');
+		this._button_facebook__imgo['ondragstart']=function() { return false; };
+		this._button_facebook.appendChild(this._button_facebook__imgo);
+		this._button_facebook.ggId="button_facebook";
+		this._button_facebook.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._button_facebook.ggVisible=true;
+		this._button_facebook.className='ggskin ggskin_svg ';
+		this._button_facebook.ggType='svg';
+		hs ='';
+		hs+='cursor : pointer;';
+		hs+='height : 32px;';
+		hs+='left : 35px;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 32px;';
+		this._button_facebook.setAttribute('style',hs);
+		this._button_facebook.style[domTransform + 'Origin']='50% 50%';
+		me._button_facebook.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		me._button_facebook.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return me.player.getCurrentNode();
+		}
+		this._button_facebook.onclick=function () {
+			window.open('https:\/\/www.facebook.com\/sharer\/sharer.php?u=' + location.href);
+		}
+		this._button_facebook.onmouseover=function () {
+			me._button_facebook__img.style.visibility='hidden';
+			me._button_facebook__imgo.style.visibility='inherit';
+		}
+		this._button_facebook.onmouseout=function () {
+			me._button_facebook__img.style.visibility='inherit';
+			me._button_facebook__imgo.style.visibility='hidden';
+		}
+		this._button_facebook.ggUpdatePosition=function () {
+		}
+		this._buttons_social.appendChild(this._button_facebook);
+		this._button_g=document.createElement('div');
+		this._button_g__img=document.createElement('img');
+		this._button_g__img.className='ggskin ggskin_svg';
+		this._button_g__img.setAttribute('src',basePath + 'images/button_g.svg');
+		this._button_g__img.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;pointer-events:none;');
+		this._button_g__img['ondragstart']=function() { return false; };
+		this._button_g.appendChild(this._button_g__img);
+		this._button_g__imgo=document.createElement('img');
+		this._button_g__imgo.className='ggskin ggskin_svg';
+		this._button_g__imgo.setAttribute('src',basePath + 'images/button_g__o.svg');
+		this._button_g__imgo.setAttribute('style','position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;-webkit-user-drag:none;visibility:hidden;pointer-events:none;');
+		this._button_g__imgo['ondragstart']=function() { return false; };
+		this._button_g.appendChild(this._button_g__imgo);
+		this._button_g.ggId="button_G+";
+		this._button_g.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._button_g.ggVisible=true;
+		this._button_g.className='ggskin ggskin_svg ';
+		this._button_g.ggType='svg';
+		hs ='';
+		hs+='cursor : pointer;';
+		hs+='height : 32px;';
+		hs+='left : 0px;';
+		hs+='position : absolute;';
+		hs+='top : 0px;';
+		hs+='visibility : inherit;';
+		hs+='width : 32px;';
+		this._button_g.setAttribute('style',hs);
+		this._button_g.style[domTransform + 'Origin']='50% 50%';
+		me._button_g.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		me._button_g.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return me.player.getCurrentNode();
+		}
+		this._button_g.onclick=function () {
+			window.open('https:\/\/plusone.google.com\/_\/+1\/confirm?url=' + location.href);
+		}
+		this._button_g.onmouseover=function () {
+			me._button_g__img.style.visibility='hidden';
+			me._button_g__imgo.style.visibility='inherit';
+		}
+		this._button_g.onmouseout=function () {
+			me._button_g__img.style.visibility='inherit';
+			me._button_g__imgo.style.visibility='hidden';
+		}
+		this._button_g.ggUpdatePosition=function () {
+		}
+		this._buttons_social.appendChild(this._button_g);
+		this.divSkin.appendChild(this._buttons_social);
 		me._arrow_menu.style[domTransition]='none';
 		me._arrow_menu.ggParameter.a="45.0000";
 		me._arrow_menu.style[domTransform]=parameterToTransform(me._arrow_menu.ggParameter);
