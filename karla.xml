@@ -13,7 +13,7 @@
     <min fov="5" pan="0" tilt="-24.7"/>
     <max fov="48.5" pan="360" tilt="90"/>
   </view>
-  <userdata comment="" tags="karla" longitude="" info="" copyright="" title="Алеша, сходи в магазин!" description="Смена картинок" author="" latitude="" datetime="2016:08:12 03:02:56" source="https://asvm.tk/"/>
+  <userdata comment="" tags="karla" longitude="" info="" copyright="" title="Алеша, сходи в магазин!" description="Вылет задержан" author="" latitude="" datetime="2016:08:12 03:02:56" source="https://asvm.tk/"/>
   <hotspots width="180" wordwrap="1" height="20">
     <label bordercolor="0x000000" backgroundcolor="0xffffff" width="180" background="1" textalpha="1" wordwrap="1" borderradius="1" borderalpha="1" enabled="1" textcolor="0x000000" border="1" height="20" backgroundalpha="1"/>
     <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" borderalpha="1" handcursor="1" backgroundalpha="0.2509803921568627"/>
