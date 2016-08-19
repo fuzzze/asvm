@@ -1,5 +1,6 @@
 #container {
-
+    cursor:  pointer;
+    cursor:  url(images/arrows.cur), pointer;
 }
 #tlg-form{
 	text-align:center;
