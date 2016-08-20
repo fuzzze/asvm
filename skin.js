@@ -1,11 +1,11 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Fri Aug 19 18:31:26 2016
+// Generated Sun Aug 21 03:05:43 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
-	ggSkinVars['currentPan'] = 'index';
+	ggSkinVars['currentPan'] = '0';
 	var me=this;
 	var flag=false;
 	this.player=player;
@@ -818,8 +818,7 @@ function pano2vrSkin(player,base) {
 			return me.player.getCurrentNode();
 		}
 		this._sound.onclick=function () {
-			me.player.activateSound("Element01","2");
-			me.player.playPauseSound("Element01","1");
+			me.player.playPauseSound(ggSkinVars['currentPan'],"1");
 		}
 		this._sound.onmouseover=function () {
 			me._sound__img.style.visibility='hidden';
@@ -2176,6 +2175,7 @@ function pano2vrSkin(player,base) {
 		this._cover.className='ggskin ggskin_text ';
 		this._cover.ggType='text';
 		hs ='';
+		hs+='cursor : pointer;';
 		hs+='height : 100%;';
 		hs+='left : 0px;';
 		hs+='position : absolute;';
@@ -2204,6 +2204,15 @@ function pano2vrSkin(player,base) {
 		}
 		me._cover.ggElementNodeId=function() {
 			return me.player.getCurrentNode();
+		}
+		this._cover.onclick=function () {
+			if (me.player.transitionsDisabled) {
+				me._cover.style[domTransition]='none';
+			} else {
+				me._cover.style[domTransition]='all 500ms ease-out 0ms';
+			}
+			me._cover.style.opacity='0';
+			me._cover.style.visibility='hidden';
 		}
 		this._cover.ggUpdatePosition=function () {
 		}
@@ -2242,22 +2251,6 @@ function pano2vrSkin(player,base) {
 				return this.parentNode.ggElementNodeId();
 			}
 			return me.player.getCurrentNode();
-		}
-		this._bigalesha.onclick=function () {
-			if (me.player.transitionsDisabled) {
-				me._bigalesha.style[domTransition]='none';
-			} else {
-				me._bigalesha.style[domTransition]='all 500ms ease-out 0ms';
-			}
-			me._bigalesha.style.opacity='0';
-			me._bigalesha.style.visibility='hidden';
-			if (me.player.transitionsDisabled) {
-				me._cover.style[domTransition]='none';
-			} else {
-				me._cover.style[domTransition]='all 500ms ease-out 0ms';
-			}
-			me._cover.style.opacity='0';
-			me._cover.style.visibility='hidden';
 		}
 		this._bigalesha.ggUpdatePosition=function () {
 			this.style[domTransition]='none';
@@ -2476,11 +2469,12 @@ function pano2vrSkin(player,base) {
 			me._thumbnail_cloner.ggUpdate(me._thumbnail_cloner.ggTags);
 		}
 		this.divSkin.ggLoaded=function() {
+			ggSkinVars['currentPan'] = me.ggUserdata.information;
+			me.player.playSound(ggSkinVars['currentPan'],"1");
 		}
 		this.divSkin.ggReLoaded=function() {
 		}
 		this.divSkin.ggLoadedLevels=function() {
-			ggSkinVars['currentPan'] = me.ggUserdata.information;
 		}
 		this.divSkin.ggReLoadedLevels=function() {
 		}

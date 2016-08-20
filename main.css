@@ -1,6 +1,5 @@
-#container {
-    cursor:  pointer;
-    cursor:  url(images/arrows.cur), pointer;
+#container div canvas{
+	box-shadow: inset 0px 0px 190px 20px rgba(33, 87, 83, 0.9);
 }
 #tlg-form{
 	text-align:center;
