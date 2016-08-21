@@ -1,5 +1,7 @@
-#container div canvas{
-	box-shadow: inset 0px 0px 190px 20px rgba(33, 87, 83, 0.9);
+@media(min-width:767px) {
+	#container div canvas{
+		box-shadow: inset 0px 0px 190px 20px rgba(33, 87, 83, 0.9);
+	}
 }
 #tlg-form{
 	text-align:center;
@@ -35,4 +37,23 @@
 }
 .gg_contextmenu{
 	background:red;
+}
+
+.poly_title{
+	color:red;
+	background: white;
+	padding: 10px;
+	box-shadow: 0px 2px 27px 46px black;
+	position: relative;
+}
+.poly_title:after{
+	display: block;
+	content: '';
+	width:10px;
+	height:10px;
+	transform: rotate(45deg);
+	background: green;
+	border:none;
+	bottom: 5px;
+	left: 10px;
 }

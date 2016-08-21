@@ -31,13 +31,13 @@
 			/* fullscreen */
 			html {
 				height:100%;
-				cursor:  url(images/arrows.cur) 2 2, default;
 			}
 			body {
 				height:100%;
 				margin: 0px;
 				overflow:hidden; /* disable scrollbars */
 				font-size: 10pt;
+				background-color: black;
 			}
 			/* fix for scroll bars on webkit & >=Mac OS X Lion */ 
 			::-webkit-scrollbar {
@@ -49,8 +49,7 @@
 			}
 			.pace {
 			  -webkit-pointer-events: none;
-			  pointer-events: none;
-			
+			  pointer-events: none;		
 			  -webkit-user-select: none;
 			  -moz-user-select: none;
 			  user-select: none;
