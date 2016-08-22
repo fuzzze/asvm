@@ -1,16 +1,47 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
 @media(min-width:767px) {
 	#container div canvas{
 		box-shadow: inset 0px 0px 190px 20px rgba(33, 87, 83, 0.9);
 	}
 }
 
-#fbsh{
-	width: 100%;
-	height: 100%;
-	border: none;
+.curVideo{
+	cursor: url(images/curVideo.png) 16 16, pointer;
 }
+.curAudio{
+	cursor: url(images/curAudio.png) 16 16, pointer;
+}
+
 #tlg-form{
 	text-align:center;
+}
+
+
+svg {
+  width: 100%;
+  height: inherit;
+}
+svg text {
+  text-anchor: middle;
+}
+svg #alpha {
+  fill: #dfdfdf;
+}
+svg #title {
+  letter-spacing: -2px;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+svg #base {
+  fill: white;
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
 }
 
 #tlg-message{
