@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Tue Aug 23 03:26:05 2016
+// Generated Tue Aug 23 12:19:02 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -4409,19 +4409,19 @@ function pano2vrSkin(player,base) {
 		this.divSkin.appendChild(this._info_window);
 		this._buttons_social=document.createElement('div');
 		this._buttons_social.ggId="buttons_social";
-		this._buttons_social.ggLeft=-50;
-		this._buttons_social.ggTop=-98;
+		this._buttons_social.ggLeft=-98;
+		this._buttons_social.ggTop=-141;
 		this._buttons_social.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 		this._buttons_social.ggVisible=true;
 		this._buttons_social.className='ggskin ggskin_container ';
 		this._buttons_social.ggType='container';
 		hs ='';
-		hs+='height : 143px;';
-		hs+='left : -50px;';
+		hs+='height : 186px;';
+		hs+='left : -98px;';
 		hs+='position : absolute;';
-		hs+='top : -98px;';
+		hs+='top : -141px;';
 		hs+='visibility : inherit;';
-		hs+='width : 48px;';
+		hs+='width : 95px;';
 		this._buttons_social.setAttribute('style',hs);
 		this._buttons_social.style[domTransform + 'Origin']='50% 50%';
 		me._buttons_social.ggIsActive=function() {
@@ -4459,12 +4459,12 @@ function pano2vrSkin(player,base) {
 		this._button_twitter.ggType='svg';
 		hs ='';
 		hs+='cursor : pointer;';
-		hs+='height : 32px;';
-		hs+='left : 7px;';
+		hs+='height : 56px;';
+		hs+='left : 26px;';
 		hs+='position : absolute;';
-		hs+='top : 56px;';
+		hs+='top : 84px;';
 		hs+='visibility : inherit;';
-		hs+='width : 32px;';
+		hs+='width : 72px;';
 		this._button_twitter.setAttribute('style',hs);
 		this._button_twitter.style[domTransform + 'Origin']='50% 50%';
 		me._button_twitter.ggIsActive=function() {
@@ -4513,12 +4513,12 @@ function pano2vrSkin(player,base) {
 		this._button_facebook.ggType='svg';
 		hs ='';
 		hs+='cursor : pointer;';
-		hs+='height : 32px;';
-		hs+='left : 7px;';
+		hs+='height : 56px;';
+		hs+='left : 26px;';
 		hs+='position : absolute;';
-		hs+='top : 14px;';
+		hs+='top : 28px;';
 		hs+='visibility : inherit;';
-		hs+='width : 32px;';
+		hs+='width : 72px;';
 		this._button_facebook.setAttribute('style',hs);
 		this._button_facebook.style[domTransform + 'Origin']='50% 50%';
 		me._button_facebook.ggIsActive=function() {
