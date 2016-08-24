@@ -17,6 +17,10 @@ html {
 	cursor: url(images/curAudio.png) 16 16, pointer;
 }
 
+.yvideo{
+	width:100%;
+}
+
 #tlg-form{
 	text-align:center;
 }

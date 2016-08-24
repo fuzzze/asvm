@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Thu Aug 25 00:47:52 2016
+// Generated Thu Aug 25 03:00:49 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -4185,6 +4185,18 @@ function pano2vrSkin(player,base) {
 			me._info_window.style[domTransition]='none';
 			me._info_window.style.visibility='hidden';
 			me._info_window.ggVisible=false;
+			me._info_w_text.ggText="";
+			me._info_w_text__text.innerHTML=me._info_w_text.ggText;
+			if (me._info_w_text.ggUpdateText) {
+				me._info_w_text.ggUpdateText=function() {
+					var hs="";
+					if (hs!=this.ggText) {
+						this.ggText=hs;
+						this.ggTextDiv.innerHTML=hs;
+						if (this.ggUpdatePosition) this.ggUpdatePosition();
+					}
+				}
+			}
 		}
 		this._dark_bg.ggUpdatePosition=function () {
 		}
@@ -4397,6 +4409,18 @@ function pano2vrSkin(player,base) {
 			me._dark_bg.style[domTransition]='none';
 			me._dark_bg.style.visibility='hidden';
 			me._dark_bg.ggVisible=false;
+			me._info_w_text.ggText="";
+			me._info_w_text__text.innerHTML=me._info_w_text.ggText;
+			if (me._info_w_text.ggUpdateText) {
+				me._info_w_text.ggUpdateText=function() {
+					var hs="";
+					if (hs!=this.ggText) {
+						this.ggText=hs;
+						this.ggTextDiv.innerHTML=hs;
+						if (this.ggUpdatePosition) this.ggUpdatePosition();
+					}
+				}
+			}
 		}
 		this._info_win_close.ggUpdatePosition=function () {
 			this.style[domTransition]='none';
@@ -5578,6 +5602,37 @@ function pano2vrSkin(player,base) {
 					return this.parentNode.ggElementNodeId();
 				}
 				return me.ggNodeId;
+			}
+			this._video_dumb.onclick=function () {
+				me.skin._info_w_text.ggText="<iframe class=\"yvideo\" id=\"video\" src=\"\/\/www.youtube.com\/embed\/"+me.hotspot.description+"?rel=0&autoplay=1&modestbranding=1&theme=dark\" frameborder=\"0\" width=\"592\" height=\"318\" allowfullscreen><\/iframe>";
+				me.skin._info_w_text__text.innerHTML=me.skin._info_w_text.ggText;
+				if (me.skin._info_w_text.ggUpdateText) {
+					me.skin._info_w_text.ggUpdateText=function() {
+						var hs="<iframe class=\"yvideo\" id=\"video\" src=\"\/\/www.youtube.com\/embed\/"+me.hotspot.description+"?rel=0&autoplay=1&modestbranding=1&theme=dark\" frameborder=\"0\" width=\"592\" height=\"318\" allowfullscreen><\/iframe>";
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+				}
+				me.skin._info_window.style[domTransition]='none';
+				me.skin._info_window.style.visibility=(Number(me.skin._info_window.style.opacity)>0||!me.skin._info_window.style.opacity)?'inherit':'hidden';
+				me.skin._info_window.ggVisible=true;
+				me.player.setVolume("_main",0);
+				me.player.setVolume("_background",0);
+				me.skin._info_w_title.ggText=me.hotspot.title;
+				me.skin._info_w_title__text.innerHTML=me.skin._info_w_title.ggText;
+				if (me.skin._info_w_title.ggUpdateText) {
+					me.skin._info_w_title.ggUpdateText=function() {
+						var hs=me.hotspot.title;
+						if (hs!=this.ggText) {
+							this.ggText=hs;
+							this.ggTextDiv.innerHTML=hs;
+							if (this.ggUpdatePosition) this.ggUpdatePosition();
+						}
+					}
+				}
 			}
 			this._video_dumb.ggUpdatePosition=function () {
 			}
