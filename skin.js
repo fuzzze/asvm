@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Tue Aug 23 12:47:57 2016
+// Generated Thu Aug 25 00:47:52 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -4534,21 +4534,7 @@ function pano2vrSkin(player,base) {
 			return me.player.getCurrentNode();
 		}
 		this._button_facebook.onclick=function () {
-			me._info_w_text.ggText="<iframe id='fbsh' name='fbsh' src='https:\/\/www.facebook.com\/sharer\/sharer.php?u=https:\/\/asvm.tk\/'><\/iframe>";
-			me._info_w_text__text.innerHTML=me._info_w_text.ggText;
-			if (me._info_w_text.ggUpdateText) {
-				me._info_w_text.ggUpdateText=function() {
-					var hs="<iframe id='fbsh' name='fbsh' src='https:\/\/www.facebook.com\/sharer\/sharer.php?u=https:\/\/asvm.tk\/'><\/iframe>";
-					if (hs!=this.ggText) {
-						this.ggText=hs;
-						this.ggTextDiv.innerHTML=hs;
-						if (this.ggUpdatePosition) this.ggUpdatePosition();
-					}
-				}
-			}
-			me._info_window.style[domTransition]='none';
-			me._info_window.style.visibility=(Number(me._info_window.style.opacity)>0||!me._info_window.style.opacity)?'inherit':'hidden';
-			me._info_window.ggVisible=true;
+			window.open('https:\/\/www.facebook.com\/sharer\/sharer.php?u=http%3A%2F%2Fasvm.tk%2F#'+me.ggUserdata.information);
 		}
 		this._button_facebook.onmouseover=function () {
 			me._button_facebook__img.style.visibility='hidden';
