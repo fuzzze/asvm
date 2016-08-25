@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tour start="index">
 <panorama id="index">
-  <input leveltilesize="510" width="4416" height="4416" levelingroll="0" levelbias="0.400" levelbiashidpi="0.400" levelingpitch="0" overlap="1" leveltileurl="index/c%c_l%r_%y_%x.jpg">
-    <level width="4416" height="4416" preload="0" predecode="0"/>
-    <level width="2208" height="2208" preload="0" predecode="0"/>
-    <level width="1104" height="1104" preload="0" predecode="0"/>
-    <level width="552" height="552" preload="0" predecode="0"/>
-    <level width="276" height="276" preload="1" predecode="1"/>
+  <input levelingroll="0" levelingpitch="0" width="4416" levelbias="0.400" levelbiashidpi="0.400" overlap="1" leveltilesize="510" leveltileurl="index/c%c_l%r_%y_%x.jpg" height="4416">
+    <level width="4416" predecode="0" height="4416" preload="0"/>
+    <level width="2208" predecode="0" height="2208" preload="0"/>
+    <level width="1104" predecode="0" height="1104" preload="0"/>
+    <level width="552" predecode="0" height="552" preload="0"/>
+    <level width="276" predecode="1" height="276" preload="1"/>
     <preview color="0x000000" strip="1"/>
   </input>
-  <view pannorth="0" fovmode="0">
-    <start pan="137.12" tilt="11.48" fov="52.6"/>
-    <min pan="0" tilt="-24.7" fov="5"/>
-    <max pan="360" tilt="90" fov="65"/>
+  <view fovmode="0" pannorth="0">
+    <start tilt="11.48" fov="52.6" pan="137.12"/>
+    <min tilt="-24.7" fov="5" pan="0"/>
+    <max tilt="90" fov="65" pan="360"/>
   </view>
-  <userdata description="Шпиль мит мир" info="index" author="" latitude="" datetime="" source="" title="Алёша, сходи в магазин!" comment="" longitude="" tags="index" copyright=""/>
-  <hotspots width="180" height="20" wordwrap="0">
-    <label width="180" borderalpha="0" border="0" height="20" textcolor="0x000000" enabled="1" backgroundalpha="1" bordercolor="0x000000" background="0" wordwrap="0" borderradius="0" backgroundcolor="0xffffff" textalpha="0"/>
-    <polystyle handcursor="1" mode="0" borderalpha="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" backgroundcolor="0x0000ff"/>
-    <polyhotspot description="" id="poly_karla" title="" url="{karla}" target="_blank">
-      <vertex pan="179.01" tilt="14.96"/>
-      <vertex pan="178.32" tilt="-0.6"/>
-      <vertex pan="170.73" tilt="-0.86"/>
-      <vertex pan="170.82" tilt="14.9"/>
+  <userdata description="Шпиль мит мир" info="index" source="" comment="" title="Алёша, сходи в магазин!" longitude="" tags="index" latitude="" copyright="" author="" datetime=""/>
+  <hotspots width="180" wordwrap="0" height="20">
+    <label enabled="1" borderalpha="0" width="180" textcolor="0x000000" wordwrap="0" bordercolor="0x000000" backgroundalpha="1" borderradius="0" textalpha="0" border="0" height="20" background="0" backgroundcolor="0xffffff"/>
+    <polystyle borderalpha="1" handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" mode="0" backgroundcolor="0x0000ff"/>
+    <polyhotspot description="" url="{karla}" id="poly_karla" target="_blank" title="">
+      <vertex tilt="14.96" pan="179.01"/>
+      <vertex tilt="-0.6" pan="178.32"/>
+      <vertex tilt="-0.86" pan="170.73"/>
+      <vertex tilt="14.9" pan="170.82"/>
     </polyhotspot>
-    <hotspot pan="-67.49" skinid="ht_zoom" description="-64.9/1.9/22.6" tilt="4.7" id="Point01" title="-64.9/1.9/22.6" url="" target="_blank"/>
-    <hotspot pan="-113.25" skinid="ht_video" description="0EygqL--RW4" tilt="-0.02" id="Point02" title="Будь водой, Алеша!" url="" target="_blank"/>
-    <hotspot pan="118.35" skinid="ht_audio" description="" tilt="15.98" id="Point03" title="" url="" target="_blank"/>
+    <hotspot description="-64.9/1.9/22.6" tilt="4.7" url="" id="Point01" target="_blank" title="-64.9/1.9/22.6" skinid="ht_zoom" pan="-67.49"/>
+    <hotspot description="0EygqL--RW4" tilt="-0.02" url="" id="Point02" target="_blank" title="Будь водой, Алеша!" skinid="ht_video" pan="-113.25"/>
+    <hotspot description="" tilt="15.98" url="" id="Point03" target="_blank" title="" skinid="ht_audio" pan="118.35"/>
   </hotspots>
   <media>
-    <sound pan="-62.060" mode="3" tiltsize="10.000" ambientlevel="0.000" tilt="6.340" loop="1" level="1.000" id="Element01" pansize="10.000" field="59.000">
+    <sound ambientlevel="0.000" tilt="6.340" pansize="10.000" loop="1" id="Element01" level="1.000" tiltsize="10.000" pan="-62.060" field="59.000" mode="3">
       <source url="media/mif_1.mp3"/>
     </sound>
-    <sound pan="154.820" mode="2" tiltsize="10.000" ambientlevel="0.000" tilt="8.890" loop="0" level="1.000" id="Element02" pansize="10.000" field="90.000">
+    <sound ambientlevel="0.000" tilt="8.890" pansize="10.000" loop="0" id="Element02" level="1.000" tiltsize="10.000" pan="154.820" field="90.000" mode="2">
       <source url="media/street1.mp3"/>
     </sound>
   </media>
-  <transition softedge="0" type="crossdissolve" zoomout="0" enabled="1" blendcolor="0x000000" blendtime="1" zoomoutpause="1" zoomin="0" zoomspeed="2" zoomfov="20"/>
-  <control invertcontrol="1" sensitivity="8" lockedmouse="0" invertwheel="0" contextfullscreen="0" simulatemass="1" lockedwheel="0" speedwheel="1" lockedkeyboardzoom="0" lockedkeyboard="0" dblclickfullscreen="0" hideabout="1">
-    <menulink text="Идея" url=""/>
+  <transition enabled="1" type="crossdissolve" blendtime="1" zoomfov="20" zoomin="0" zoomoutpause="1" softedge="0" zoomspeed="2" blendcolor="0x000000" zoomout="0"/>
+  <control speedwheel="1" sensitivity="8" lockedmouse="0" lockedkeyboardzoom="0" invertwheel="0" simulatemass="1" dblclickfullscreen="0" contextfullscreen="0" lockedwheel="0" hideabout="1" invertcontrol="1" lockedkeyboard="0">
+    <menulink url="" text="Идея"/>
   </control>
 </panorama>
 <panorama id="karla">
