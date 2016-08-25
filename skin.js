@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Thu Aug 25 16:03:49 2016
+// Generated Fri Aug 26 02:34:43 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -799,7 +799,7 @@ function pano2vrSkin(player,base) {
 				me._arrow_menu.style[domTransition]='all 500ms ease-out 0ms';
 			}
 			if (flag) {
-				me._arrow_menu.style.opacity='0.7';
+				me._arrow_menu.style.opacity='0.9';
 				me._arrow_menu.style.visibility=me._arrow_menu.ggVisible?'inherit':'hidden';
 			} else {
 				me._arrow_menu.style.opacity='0';
@@ -855,7 +855,7 @@ function pano2vrSkin(player,base) {
 				me._buttons_social.style[domTransition]='all 500ms ease-out 0ms';
 			}
 			if (flag) {
-				me._buttons_social.style.opacity='1';
+				me._buttons_social.style.opacity='0.9';
 				me._buttons_social.style.visibility=me._buttons_social.ggVisible?'inherit':'hidden';
 			} else {
 				me._buttons_social.style.opacity='0';
@@ -918,7 +918,7 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='height : 112px;';
 		hs+='left : 34px;';
-		hs+='opacity : 0.7;';
+		hs+='opacity : 0.9;';
 		hs+='position : absolute;';
 		hs+='top : -124px;';
 		hs+='visibility : inherit;';
@@ -4439,6 +4439,7 @@ function pano2vrSkin(player,base) {
 		hs ='';
 		hs+='height : 186px;';
 		hs+='left : -98px;';
+		hs+='opacity : 0.9;';
 		hs+='position : absolute;';
 		hs+='top : -141px;';
 		hs+='visibility : inherit;';
