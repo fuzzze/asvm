@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.2/15080
 // Filename: Moi-tour.ggsk
-// Generated Thu Aug 25 12:53:58 2016
+// Generated Thu Aug 25 13:34:50 2016
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -4711,6 +4711,78 @@ function pano2vrSkin(player,base) {
 		}
 		this._fullscreenwin.ggUpdatePosition=function () {
 		}
+		this._roundclose=document.createElement('div');
+		this._roundclose.ggId="roundClose";
+		this._roundclose.ggLeft=-43;
+		this._roundclose.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+		this._roundclose.ggVisible=true;
+		this._roundclose.className='ggskin ggskin_rectangle ';
+		this._roundclose.ggType='rectangle';
+		hs ='';
+		hs+=cssPrefix + 'border-radius : 50px;';
+		hs+='border-radius : 50px;';
+		hs+='background : rgba(255,255,255,0.470588);';
+		hs+='border : 0px solid #000000;';
+		hs+='height : 30px;';
+		hs+='left : -43px;';
+		hs+='position : absolute;';
+		hs+='top : 6px;';
+		hs+='visibility : inherit;';
+		hs+='width : 30px;';
+		this._roundclose.setAttribute('style',hs);
+		this._roundclose.style[domTransform + 'Origin']='50% 50%';
+		me._roundclose.ggIsActive=function() {
+			if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+				return this.parentNode.ggIsActive();
+			}
+			return false;
+		}
+		me._roundclose.ggElementNodeId=function() {
+			if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+				return this.parentNode.ggElementNodeId();
+			}
+			return me.player.getCurrentNode();
+		}
+		this._roundclose.onmouseover=function () {
+			me.elementMouseOver['roundclose']=true;
+		}
+		this._roundclose.onmouseout=function () {
+			me.elementMouseOver['roundclose']=false;
+		}
+		this._roundclose.ontouchend=function () {
+			me.elementMouseOver['roundclose']=false;
+		}
+		me._roundclose.ggCurrentLogicStateBackgroundColor = -1;
+		this._roundclose.ggUpdateConditionTimer=function () {
+			var newLogicStateBackgroundColor;
+			if (
+				(me.elementMouseOver['roundclose'] == true)
+			)
+			{
+				newLogicStateBackgroundColor = 0;
+			}
+			else {
+				newLogicStateBackgroundColor = -1;
+			}
+			if (me._roundclose.ggCurrentLogicStateBackgroundColor != newLogicStateBackgroundColor) {
+				me._roundclose.ggCurrentLogicStateBackgroundColor = newLogicStateBackgroundColor;
+				me._roundclose.style[domTransition]='background-color 300ms ease 0ms';
+				if (me._roundclose.ggCurrentLogicStateBackgroundColor == 0) {
+					me._roundclose.style.backgroundColor="rgba(0,0,0,0.784314)";
+				}
+				else {
+					me._roundclose.style.backgroundColor="rgba(255,255,255,0.470588)";
+				}
+			}
+		}
+		this._roundclose.ggUpdatePosition=function () {
+			this.style[domTransition]='none';
+			if (this.parentNode) {
+				var w=this.parentNode.offsetWidth;
+					this.style.left=(this.ggLeft - 0 + w) + 'px';
+			}
+		}
+		this._fullscreenwin.appendChild(this._roundclose);
 		this._fullscreenvideoclose=document.createElement('div');
 		this._fullscreenvideoclose__img=document.createElement('img');
 		this._fullscreenvideoclose__img.className='ggskin ggskin_svg';
@@ -4750,10 +4822,10 @@ function pano2vrSkin(player,base) {
 			me._fullscreenwin.style[domTransition]='none';
 			me._fullscreenwin.style.visibility='hidden';
 			me._fullscreenwin.ggVisible=false;
-			me._info_w_text.ggText="";
-			me._info_w_text__text.innerHTML=me._info_w_text.ggText;
-			if (me._info_w_text.ggUpdateText) {
-				me._info_w_text.ggUpdateText=function() {
+			me._fullscreenwin.ggText="";
+			me._fullscreenwin__text.innerHTML=me._fullscreenwin.ggText;
+			if (me._fullscreenwin.ggUpdateText) {
+				me._fullscreenwin.ggUpdateText=function() {
 					var hs="";
 					if (hs!=this.ggText) {
 						this.ggText=hs;
@@ -5023,6 +5095,9 @@ function pano2vrSkin(player,base) {
 		me._mappin_003.ggUpdateConditionTimer();
 		me._mappin_001.ggUpdateConditionTimer();
 		me._mappin_004.ggUpdateConditionTimer();
+		if (me.elementMouseOver['roundclose']) {
+		}
+		me._roundclose.ggUpdateConditionTimer();
 		me.ggHotspotCallChildFunctions('ggUpdateConditionTimer');
 	};
 	function SkinHotspotClass(skinObj,hotspot) {

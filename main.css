@@ -18,6 +18,8 @@ html {
 }
 
 .yvideo{
+	border-top: solid black 60px;
+	box-sizing: content-box;
 	width:100%;
 	height: 100%;
 }
