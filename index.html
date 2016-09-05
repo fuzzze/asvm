@@ -70,8 +70,64 @@
 			}
 		</style>
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+	<script type="text/javascript" src="http://lib.ivank.net/ivank.js"></script>
+	<script type="text/javascript" src="http://k3d.ivank.net/K3D.js"></script>
+	<script type="text/javascript">
+		
+		function Start()
+		{
+			K3D.load("sport_car/models/sport_car.dae", loaded);		// loading file ...
+		}
+		
+		function loaded(data)
+		{
+			var m = K3D.parse.fromCollada(data);	// done !
+			console.log(m);
+			
+			var stage = new Stage("c");  
+			var s = new Sprite(); 
+			stage.addChild(s);
+			
+			s.x = stage.stageWidth/4; 
+			s.y = stage.stageHeight/4;
+			s.z = 400;
+			s.scaleX = s.scaleY = s.scaleZ = 0.5;
+			s.rotationX = 90;
+			
+			//  my model uses several images
+			var imgs = {};
+			for(var n in m.images) imgs[n] = new BitmapData("sport_car/models/" + m.images[n]);
+			
+			for(var i=0; i<m.geometries.length; i++)
+			{
+				var g = m.geometries[i];
+				for(var j=0; j<g.triangles.length; j++)
+				{
+					var t = g.triangles[j];
+					
+					var mat = m.materials[t.material];
+					var eff = m.effects[mat];
+					if(eff.surface == null) continue;	// skip meshes without texture
+					
+					var verts = K3D.edit.unwrap(t.i_VERTEX  , g.sources[t.s_VERTEX  ], 3);
+					var uvt   = K3D.edit.unwrap(t.i_TEXCOORD, g.sources[t.s_TEXCOORD], 2);
+					for(var k=1; k<uvt.length; k+=2) uvt[k] = 1 - uvt[k];
+					var inds  = [];
+					for(var k=0; k<t.i_VERTEX.length; k++) inds.push(k);
+					
+					s.graphics.beginBitmapFill(imgs[eff.surface]);
+					s.graphics.drawTriangles3D(verts, inds, uvt);
+				}
+			}
+			
+			stage.addEventListener(Event.ENTER_FRAME, 
+				function(e) {   s.rotationY += 0.001*(stage.mouseX - stage.stageWidth/2);  
+				                s.rotationX += 0.001*(stage.mouseY - stage.stageHeight/2); } );
+		}
+	</script>
 </head>
-<body>	
+<body  onload="Start();">
+	
 <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38912325 = new Ya.Metrika({ id:38912325, clickmap:true, trackLinks:true, accurateTrackBounce:true, ut:"noindex" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38912325?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 <!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
 		<script type="text/javascript" src="pano2vr_player.js">

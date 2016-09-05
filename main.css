@@ -4,8 +4,11 @@ html {
   text-rendering: optimizelegibility;
 }
 
+
+
+
 @media(min-width:767px) {
-	#container div canvas{
+	#container>div>canvas{
 		box-shadow: inset 0px 0px 190px 20px rgba(33, 87, 83, 0.9);
 	}
 }
