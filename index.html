@@ -4,6 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
 		<title>Алёша, сходи в магазин!</title>
+		<link rel="manifest" href="/manifest.json">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -70,6 +71,18 @@
 			}
 		</style>
 <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "b92f104c-c798-4191-bfdb-39374241ca34",
+      autoRegister: false,
+      notifyButton: {
+        enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
+  
 	<script type="text/javascript" src="http://lib.ivank.net/ivank.js"></script>
 	<script type="text/javascript" src="http://k3d.ivank.net/K3D.js"></script>
 	<script type="text/javascript">

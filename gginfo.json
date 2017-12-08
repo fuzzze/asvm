@@ -11,8 +11,8 @@
 	"player": {
 		"js": "pano2vr_player.js"
 	},
-	"creationdate": "2016-09-05T16:38:16.927Z",
-	"configuration": "index.xml",
+	"creationdate": "2016-10-02T11:04:42.273Z",
+	"configuration": "teatr.xml",
 	"preview": {
 		"img": "preview.jpg",
 		"width": 1280,
